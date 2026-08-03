@@ -1,0 +1,344 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --sidebar-width: 280px;
+    /* Colores */
+    --primary-dark: #314234;
+    --primary-light: #4f724e;
+    --accent-color: #8f9f7e;
+    --secondary-color: #f4f1e6;
+    --bg-color: #f7f8f6;
+    --text-primary: #27352a;
+    --text-secondary: #7f837e;
+    /* Bordes */
+    --radius: 10px;
+    /*Espaciado*/
+    --spacing-sm: 5px;
+    --spacing-md: 10px;
+    --spacing-lg: 20px;
+    --spacing-xl: 40px;
+    /*Tipografía*/
+    --font-size-sm: 15px;
+    --font-size-md: 20px;
+    --font-size-lg: 30px;
+    --font-size-xl: 50px;
+    --font-family: 'Calibri';
+    /*Sombras*/
+    --shadow-sm: 0 0 10px rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 0 20px rgba(0, 0, 0, 0.15);
+    --shadow-lg: 0 0 30px rgba(0, 0, 0, 0.25);
+}
+
+.tag {
+    font-size: var(--font-size-sm);
+    background-color: var(--secondary-color);
+    font-weight: 400;
+    color: var(--primary-dark);
+    border: 1px solid var(--accent-color);
+    padding: var(--spacing-sm) var(--spacing-md);
+    border-radius: 999px;
+}
+
+body {
+    font-family: var(--font-family);
+}
+
+/*Contenedor Principal (Wrapper) */
+.cv-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    /* Centra la caja exterior en la pantalla */
+    padding: var(--spacing-lg);
+    /* Para que no se pegue a los bordes en móviles */
+}
+
+header {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xl);
+    padding-bottom: var(--spacing-lg);
+
+}
+
+header img {
+    object-fit: cover;
+    width: 150px;
+    height: 200px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-lg);
+    border: 1px solid var(--accent-color);
+}
+
+/*Le pongo la línea debajo del nombre y puesto mejor que debajo de todo el header*/
+
+.header-info {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+    border-bottom: 2px solid var(--primary-light);
+    padding-bottom: var(--spacing-lg);
+}
+
+.header-title {
+    font-size: var(--font-size-xl);
+    color: var(--text-primary);
+    letter-spacing: 2px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.header-subtitle {
+    font-size: var(--font-size-md);
+    color: var(--text-secondary);
+    letter-spacing: 1px;
+}
+
+main {
+    color: var(--text-primary);
+    /* Color del texto pero excluyendo el titulo, para que tenga más fuerza */
+    display: grid;
+    grid-template-columns: var(--sidebar-width) 1fr;
+    gap: var(--spacing-lg);
+}
+
+aside {
+    display: flex;
+    flex-direction: column;
+    /* Le he puesto esto porque el gap no afectaba y content-info, skills, etc se dibujaban en horizontal */
+    gap: var(--spacing-lg);
+    background-color: var(--secondary-color);
+    padding: var(--spacing-lg);
+    border-radius: var(--radius);
+
+}
+
+aside h2 {
+    font-size: var(--font-size-md);
+    color: var(--primary-dark);
+    /*Lo pongo en md para que no destaque tanto como el del contenido*/
+    font-weight: bold;
+    border-bottom: 1px solid var(--accent-color);
+    padding-bottom: var(--spacing-sm);
+}
+
+
+/*Para que esta tarjeta y las demás muestre los elementos con más separación */
+aside>section {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+    padding-bottom: var(--spacing-md);
+}
+
+.info-item {
+    display: flex;
+    gap: var(--spacing-md);
+    align-items: flex-start;
+
+
+}
+
+.info-item .icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 28px;
+    height: 28px;
+
+    border: 3px solid var(--primary-light);
+    border-radius: 50%;
+
+    color: var(--primary-light);
+
+    flex-shrink: 0;
+}
+
+.info-item .icon svg {
+    width: 19px;
+    height: 19px;
+}
+
+.info-item>div {
+    display: flex;
+    flex-direction: column;
+    padding-top: 2px;
+}
+
+
+.info-item .label {
+    font-weight: bold;
+}
+
+.info-item .value {
+    font-weight: 500;
+    color: var(--text-primary);
+
+}
+
+.skills h3 {
+    font-size: var(--font-size-sm);
+    color: var(--primary-light);
+    margin-top: var(--spacing-md);
+    margin-bottom: var(--spacing-sm);
+    border-bottom: 1px dashed var(--accent-color);
+    padding-bottom: var(--spacing-sm);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.skill-item {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: var(--spacing-sm);
+
+}
+
+.skill-chip {
+    text-align: center;
+    flex-shrink: 0;
+    color: var(--text-secondary);
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-lg);
+    background-color: var(--bg-color);
+    padding: var(--spacing-lg);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-md);
+}
+
+.content h2 {
+    font-size: var(--font-size-lg);
+    font-weight: bold;
+    border-bottom: 2px solid var(--accent-color);
+    padding-bottom: var(--spacing-sm);
+    letter-spacing: 1px;
+}
+
+.content p {
+    color: var(--text-secondary);
+}
+
+.content section {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+    transition: transform 0.2s ease-in-out;
+}
+
+.item {
+    display: flex;
+    border-bottom: 1px dashed var(--accent-color);
+    padding-bottom: var(--spacing-md);
+    /*Para que no se vea tan pegado. Uso 5 para seguir la norma que me dijiste de los múltiplos de 5*/
+    transition:
+        transform 0.2s ease-in-out,
+        background-color 0.2s ease-in-out,
+        box-shadow 0.2s ease-in-out;
+}
+
+/*Cuando el raton pasa por encima de la tarjeta, se mueve 5px a la derecha y se le da un poco de color de fondo y sombra*/
+.item:hover {
+    transform: translateX(5px);
+    background-color: var(--secondary-color);
+    box-shadow: var(--shadow-sm);
+}
+
+.timeline {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.timeline::before {
+    position: absolute;
+    content: "";
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    border: 3px solid var(--primary-light);
+    background-color: var(--secondary-color);
+    margin-top: var(--spacing-sm);
+}
+
+.timeline::after {
+    position: absolute;
+    top: 17px;
+    bottom: -25px;
+    content: "";
+    width: 2px;
+    background-color: var(--primary-light);
+}
+
+.item:last-child .timeline::after {
+    display: none;
+}
+
+.item-content {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding-left: var(--spacing-lg);
+
+}
+
+.item-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+
+.item-header h3 {
+    font-size: var(--font-size-md);
+    color: var(--primary-dark);
+
+}
+
+.item-header p {
+    font-size: var(--font-size-sm);
+    color: var(--text-secondary);
+    font-weight: bold;
+}
+
+.item-date {
+    color: var(--text-secondary);
+    flex-shrink: 0;
+}
+
+.item-list {
+    margin-top: var(--spacing-sm);
+    padding-left: var(--spacing-lg);
+    color: var(--text-secondary);
+}
+
+.item-list li {
+    margin-bottom: var(--spacing-sm);
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--spacing-sm);
+}
+
+.tech-details {
+    margin-top: var(--spacing-sm);
+    font-size: var(--font-size-sm);
+    font-weight: 600;
+    color: var(--primary-light);
+    line-height: 1.4;
+}
