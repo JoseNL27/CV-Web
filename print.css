@@ -1,0 +1,56 @@
+@media print {
+
+    * {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+
+    @page {
+        size: A4;
+        margin: 15mm;
+    }
+
+    .item {
+        break-inside: avoid;
+    }
+
+    main {
+        display: block;
+    }
+
+    aside {
+        float: left;
+        width: 28%;
+    }
+
+
+    /*Le quito el fondo y la sombra al contenido para que no se vea raro*/
+    .content {
+        background: none;
+        box-shadow: none;
+        padding: 0;
+        float: right;
+        width: 70%;
+        margin-left: 2%;
+    }
+
+    /*Le pongo el fondo y la sombra del content en este div para que no se parta el diseño en el salto de página*/
+    .print-page {
+        background-color: var(--bg-color);
+        padding: var(--spacing-lg);
+        border-radius: var(--radius);
+        box-shadow: var(--shadow-md);
+    }
+
+    /*Le pongo el fondo y la sombra del content en este div para que no se parta el diseño en el salto de página*/
+    .print-new-page {
+        break-before: page;
+        clear: both;
+        margin-top: 16mm;
+        background-color: var(--bg-color);
+        padding: var(--spacing-lg);
+        border-radius: var(--radius);
+        box-shadow: var(--shadow-md);
+    }
+
+}

@@ -27,7 +27,7 @@
     --font-size-sm: 15px;
     --font-size-md: 20px;
     --font-size-lg: 30px;
-    --font-size-xl: 50px;
+    --font-size-xl: 48px;
     --font-family: 'Calibri';
     /*Sombras*/
     --shadow-sm: 0 0 10px rgba(0, 0, 0, 0.05);
@@ -55,7 +55,6 @@ body {
     margin: 0 auto;
     /* Centra la caja exterior en la pantalla */
     padding: var(--spacing-lg);
-    /* Para que no se pegue a los bordes en móviles */
 }
 
 header {
@@ -149,10 +148,12 @@ aside>section {
     justify-content: center;
     align-items: center;
 
-    width: 28px;
-    height: 28px;
+    margin-top: 1px;
 
-    border: 3px solid var(--primary-light);
+    width: 24px;
+    height: 24px;
+
+    border: 2.5px solid var(--primary-light);
     border-radius: 50%;
 
     color: var(--primary-light);
@@ -161,8 +162,8 @@ aside>section {
 }
 
 .info-item .icon svg {
-    width: 19px;
-    height: 19px;
+    width: 16px;
+    height: 16px;
 }
 
 .info-item>div {
@@ -231,6 +232,7 @@ aside>section {
 }
 
 .content section {
+    break-inside: avoid;
     display: flex;
     flex-direction: column;
     gap: var(--spacing-sm);
@@ -239,20 +241,6 @@ aside>section {
 
 .item {
     display: flex;
-    border-bottom: 1px dashed var(--accent-color);
-    padding-bottom: var(--spacing-md);
-    /*Para que no se vea tan pegado. Uso 5 para seguir la norma que me dijiste de los múltiplos de 5*/
-    transition:
-        transform 0.2s ease-in-out,
-        background-color 0.2s ease-in-out,
-        box-shadow 0.2s ease-in-out;
-}
-
-/*Cuando el raton pasa por encima de la tarjeta, se mueve 5px a la derecha y se le da un poco de color de fondo y sombra*/
-.item:hover {
-    transform: translateX(5px);
-    background-color: var(--secondary-color);
-    box-shadow: var(--shadow-sm);
 }
 
 .timeline {
@@ -266,8 +254,8 @@ aside>section {
 .timeline::before {
     position: absolute;
     content: "";
-    width: 14px;
-    height: 14px;
+    width: 16px;
+    height: 16px;
     border-radius: 50%;
     border: 3px solid var(--primary-light);
     background-color: var(--secondary-color);
@@ -276,7 +264,7 @@ aside>section {
 
 .timeline::after {
     position: absolute;
-    top: 17px;
+    top: 18px;
     bottom: -25px;
     content: "";
     width: 2px;
@@ -292,7 +280,19 @@ aside>section {
     flex-direction: column;
     flex: 1;
     padding-left: var(--spacing-lg);
+    border-bottom: 1px dashed var(--accent-color);
+    padding-bottom: var(--spacing-md);
+    transition:
+        transform 0.2s ease-in-out,
+        background-color 0.2s ease-in-out,
+        box-shadow 0.2s ease-in-out;
+}
 
+/*Cuando el raton pasa por encima de la tarjeta, se mueve 5px a la derecha y se le da un poco de color de fondo y sombra*/
+.item-content:hover {
+    transform: translateX(5px);
+    background-color: var(--secondary-color);
+    box-shadow: var(--shadow-sm);
 }
 
 .item-header {

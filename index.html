@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CV José Antonio Navarro</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="print.css" media="print">
 </head>
 
 <body>
@@ -15,7 +16,7 @@
             <img src="foto.png" alt="Foto de perfil">
             <div class="header-info">
                 <h1 class="header-title">José Antonio Navarro Latorre</h1>
-                <p class="header-subtitle">Técnico IT | Desarrollo Web | Hardware</p>
+                <p class="header-subtitle">Técnico IT | Hardware & Sistemas | Desarrollo Full-Stack</p>
             </div>
         </header>
 
@@ -33,7 +34,6 @@
                             </svg>
                         </span>
                         <div>
-                            <!-- <p class="label">Teléfono</p> -->
                             <p class="value">660 933 656</p>
                         </div>
                     </div>
@@ -47,7 +47,6 @@
                             </svg>
                         </span>
                         <div>
-                            <!-- <p class="label">Email</p> -->
                             <p class="value">jose271098@gmail.com</p>
                         </div>
                     </div>
@@ -64,8 +63,7 @@
                             </svg>
                         </span>
                         <div>
-                            <!-- <p class="label">Dirección</p> -->
-                            <p class="value">Calle Romero, 1 30850 Totana (Murcia)</p>
+                            <p class="value">Totana (Murcia)</p>
                         </div>
                     </div>
 
@@ -82,20 +80,19 @@
                             </svg>
                         </span>
                         <div>
-                            <!-- <p class="label">Permisos</p> -->
-                            <p class="value">Carnet de conducir B y vehículo propio.</p>
+                            <p class="value">Permiso B y vehículo propio.</p>
                             <p class="value">Carnet de carretilla elevadora.</p>
                         </div>
                     </div>
 
                 </section>
                 <section class="skills">
-                    <h2>Skills</h2>
+                    <h2>Competencias</h2>
                     <h3>Hardware</h3>
                     <div class="skill-item">
                         <span class="tag skill-chip">Montaje</span>
                         <span class="tag skill-chip">Testeo</span>
-                        <span class="tag skill-chip">Diagnostico</span>
+                        <span class="tag skill-chip">Diagnóstico</span>
                         <span class="tag skill-chip">Reparación</span>
                     </div>
                     <h3>Sistemas</h3>
@@ -107,10 +104,9 @@
                     </div>
                     <h3>Desarrollo</h3>
                     <div class="skill-item">
-                        <span class="tag skill-chip">HTML</span>
-                        <span class="tag skill-chip">CSS</span>
+                        <span class="tag skill-chip">HTML5</span>
+                        <span class="tag skill-chip">CSS3</span>
                         <span class="tag skill-chip">JavaScript</span>
-                        <span class="tag skill-chip">Responsive</span>
                     </div>
                     <h3>Backend</h3>
                     <div class="skill-item">
@@ -118,6 +114,11 @@
                         <span class="tag skill-chip">FastAPI</span>
                         <span class="tag skill-chip">Node.js</span>
                         <span class="tag skill-chip">SQLite</span>
+                    </div>
+                    <h3>Herramientas</h3>
+                    <div class="skill-item">
+                        <span class="tag skill-chip">Git</span>
+                        <span class="tag skill-chip">GitHub</span>
                     </div>
                 </section>
 
@@ -153,199 +154,210 @@
             </aside>
 
             <div class="content">
-                <section class="profile">
-                    <h2>Perfil</h2>
-                    <p>Soy técnico en Telecomunicaciones y Sistemas Informáticos con experiencia en hardware, soporte
-                        técnico y despliegue de infraestructuras. Actualmente estoy ampliando mis conocimientos en
-                        desarrollo de aplicaciones web mediante proyectos personales con HTML, CSS, JavaScript y Python.
-                    </p>
-                    <p>Mi experiencia me permite comprender tanto la infraestructura como el desarrollo de herramientas
-                        orientadas al usuario. Me caracterizo por ser una persona autodidacta, con facilidad para
-                        aprender nuevas tecnologías, resolver problemas y transformar necesidades reales en soluciones
-                        prácticas.
-                    </p>
-                </section>
+                <div class="print-page">
+                    <!-- Creo este contenedor para que no se parta el diseño en el salto de página -->
+                    <section class="profile">
+                        <h2>Perfil</h2>
+                        <p>Técnico Superior en Telecomunicaciones y Sistemas Informáticos con experiencia en hardware,
+                            soporte técnico y despliegue de infraestructuras. Actualmente amplío mi perfil mediante el
+                            desarrollo de proyectos Full-Stack con HTML, CSS, JavaScript, Python y tecnologías backend,
+                            combinando experiencia en sistemas con desarrollo de software. Destaco por mi capacidad para
+                            aprender con rapidez, analizar problemas y
+                            convertir necesidades reales en soluciones técnicas bien estructuradas.
+                        </p>
+                    </section>
 
-                <section class="resume-section">
-                    <h2>Experiencia</h2>
-                    <article class="item">
-                        <div class="timeline"></div>
-                        <div class="item-content">
-                            <div class="item-header">
-                                <h3>PcComponentes</h3>
-                                <span class="tag item-date">2024 - Actualidad</span>
+                    <section class="resume-section">
+                        <h2>Experiencia</h2>
+                        <article class="item">
+                            <div class="timeline"></div>
+                            <div class="item-content">
+                                <div class="item-header">
+                                    <h3>PcComponentes</h3>
+                                    <span class="tag item-date">2024 - Actualidad</span>
+                                </div>
+                                <p>Técnico de Montaje</p>
+                                <ul class="item-list">
+                                    <li>Montaje de equipos informáticos en entornos de alta producción, superando una
+                                        media
+                                        de 10 equipos diarios y cumpliendo estrictos estándares de calidad.</li>
+                                    <li>Instalación y configuración de sistemas operativos, controladores y software.
+                                    </li>
+                                    <li>Diagnóstico, reparación y validación de equipos antes de su expedición.</li>
+                                </ul>
                             </div>
-                            <p>Técnico de Montaje</p>
-                            <ul class="item-list">
-                                <li>Montaje de equipos informáticos en entornos de alta producción siguiendo estrictos
-                                    protocolos de calidad.</li>
-                                <li>Instalación y configuración de sistemas operativos, controladores y software.</li>
-                                <li>Diagnóstico y resolución de incidencias de hardware antes de la expedición.</li>
-                            </ul>
-                        </div>
-                    </article>
+                        </article>
 
-                    <article class="item">
-                        <div class="timeline"></div>
-                        <div class="item-content">
-                            <div class="item-header">
-                                <h3>MDTel</h3>
-                                <span class="tag item-date">2024 - 2024</span>
-                            </div>
+                        <article class="item">
+                            <div class="timeline"></div>
+                            <div class="item-content">
+                                <div class="item-header">
+                                    <h3>MDTel</h3>
+                                    <span class="tag item-date">2024 - 2024</span>
+                                </div>
 
-                            <p>Técnico de Telecomunicaciones</p>
-                            <ul class="item-list">
-                                <li>Instalación y mantenimiento de infraestructuras de telecomunicaciones y cableado
-                                    estructurado.</li>
-                                <li>Configuración e integración de equipos de red y soluciones audiovisuales</li>
-                                <li>Elaboración de documentación técnica e informes de intervención.</li>
-                            </ul>
-                        </div>
-
-                    </article>
-
-                    <article class="item">
-                        <div class="timeline"></div>
-                        <div class="item-content">
-                            <div class="item-header">
-                                <h3>Fundación Diagrama I.P.</h3>
-                                <span class="tag item-date">2023 - 2024</span>
-                            </div>
-                            <p>Técnico de Telecomunicaciones</p>
-                            <ul class="item-list">
-                                <li>Instalación y certificación de redes informáticas en centros distribuidos por toda
-                                    España.</li>
-                                <li>Configuración de switches, routers y puntos de acceso Wi-Fi.</li>
-                                <li>Elaboración de esquemas e informes técnicos de las instalaciones realizadas.</li>
-                            </ul>
-                        </div>
-
-                    </article>
-                    <article class="item">
-                        <div class="timeline"></div>
-                        <div class="item-content">
-                            <div class="item-header">
-                                <h3>PcComponentes</h3>
-                                <span class="tag item-date">2021 - 2023</span>
+                                <p>Técnico de Telecomunicaciones</p>
+                                <ul class="item-list">
+                                    <li>Instalación y mantenimiento de infraestructuras de telecomunicaciones y cableado
+                                        estructurado.</li>
+                                    <li>Configuración e integración de equipos de red y soluciones audiovisuales.</li>
+                                    <li>Elaboración de documentación técnica e informes de intervención.</li>
+                                </ul>
                             </div>
 
-                            <p>Técnico de Montaje</p>
-                            <ul class="item-list">
-                                <li>Montaje y configuración de más de 2.000 equipos informáticos, desde equipos de
-                                    oficina hasta configuraciones gaming de alto rendimiento.</li>
-                                <li>Diagnóstico de hardware, instalación de sistemas operativos y resolución de
-                                    incidencias técnicas.</li>
-                                <li>Apoyo en tareas logísticas, preparación de pedidos y gestión de inventario.</li>
-                            </ul>
-                        </div>
+                        </article>
 
-                    </article>
-                    <article class="item">
-                        <div class="timeline"></div>
-                        <div class="item-content">
-                            <div class="item-header">
-                                <h3>PowerPlanetOnline (Formación)</h3>
-                                <span class="tag item-date">2019 - 2020</span>
+                        <article class="item">
+                            <div class="timeline"></div>
+                            <div class="item-content">
+                                <div class="item-header">
+                                    <h3>Fundación Diagrama I.P.</h3>
+                                    <span class="tag item-date">2023 - 2024</span>
+                                </div>
+                                <p>Técnico de Telecomunicaciones</p>
+                                <ul class="item-list">
+                                    <li>Instalación y certificación de redes informáticas en centros distribuidos a
+                                        nivel
+                                        nacional.</li>
+                                    <li>Configuración de switches, routers y puntos de acceso Wi-Fi.</li>
+                                    <li>Elaboración de esquemas e informes técnicos de las instalaciones realizadas.
+                                    </li>
+                                </ul>
                             </div>
 
-                            <p>Técnico SAT</p>
-                            <ul class="item-list">
-                                <li>Diagnóstico y reparación de dispositivos electrónicos en el servicio de asistencia
-                                    técnica (SAT).</li>
-                                <li>Gestión de incidencias y soporte técnico en smartphones, wearables y otros
-                                    dispositivos.</li>
-                                <li>Control de stock y preparación de pedidos dentro del departamento técnico.</li>
-                            </ul>
-                        </div>
+                        </article>
+                        <article class="item">
+                            <div class="timeline"></div>
+                            <div class="item-content">
+                                <div class="item-header">
+                                    <h3>PcComponentes</h3>
+                                    <span class="tag item-date">2021 - 2023</span>
+                                </div>
 
-                    </article>
-                </section>
-
-                <section class="resume-section">
-                    <h2>Formación</h2>
-                    <article class="item">
-                        <div class="timeline"></div>
-                        <div class="item-content">
-                            <div class="item-header">
-                                <h3>IES San Juan Bosco</h3>
-                                <span class="tag item-date">2018 - 2020</span>
+                                <p>Técnico de Montaje</p>
+                                <ul class="item-list">
+                                    <li>Montaje y configuración de más de 2.000 equipos informáticos, desde equipos de
+                                        oficina hasta configuraciones gaming de alto rendimiento.</li>
+                                    <li>Diagnóstico de hardware, instalación de sistemas operativos y resolución de
+                                        incidencias técnicas.</li>
+                                    <li>Apoyo en tareas logísticas, preparación de pedidos y gestión de inventario.</li>
+                                </ul>
                             </div>
 
-                            <p>Técnico Superior en Telecomunicaciones y Sistemas Informáticos</p>
+                        </article>
+                        <article class="item">
+                            <div class="timeline"></div>
+                            <div class="item-content">
+                                <div class="item-header">
+                                    <h3>PowerPlanetOnline (Formación)</h3>
+                                    <span class="tag item-date">2019 - 2020</span>
+                                </div>
 
-                            <ul class="item-list grid">
-                                <li>Redes</li>
-                                <li>Hardware</li>
-                                <li>Electrónica</li>
-                                <li>Sistemas Operativos</li>
-                                <li>Telecomunicaciones</li>
-                                <li>Desarrollo Web básico</li>
-                                <li>Automatización y Domótica</li>
-                            </ul>
-                        </div>
-
-                    </article>
-
-                    <article class="item">
-                        <div class="timeline"></div>
-                        <div class="item-content">
-                            <div class="item-header">
-                                <h3>IES Prado Mayor</h3>
-                                <span class="tag item-date">2015 - 2018</span>
+                                <p>Técnico SAT</p>
+                                <ul class="item-list">
+                                    <li>Diagnóstico y reparación de dispositivos electrónicos en el servicio de
+                                        asistencia
+                                        técnica (SAT).</li>
+                                    <li>Gestión de incidencias y soporte técnico en smartphones, wearables y otros
+                                        dispositivos.</li>
+                                    <li>Control de stock y preparación de pedidos dentro del departamento técnico.</li>
+                                </ul>
                             </div>
 
-                            <p>Bachiller en Ciencias de la Naturaleza y de la Salud</p>
-                        </div>
+                        </article>
+                    </section>
+                </div>
+                <div class="print-new-page">
+                    <section class="resume-section">
+                        <h2>Formación</h2>
+                        <article class="item">
+                            <div class="timeline"></div>
+                            <div class="item-content">
+                                <div class="item-header">
+                                    <h3>IES San Juan Bosco</h3>
+                                    <span class="tag item-date">2018 - 2020</span>
+                                </div>
 
-                    </article>
-                </section>
+                                <p>Técnico Superior en Telecomunicaciones y Sistemas Informáticos</p>
 
-                <section class="resume-section">
-                    <h2>Proyectos</h2>
-                    <article class="item">
-                        <div class="timeline"></div>
-                        <div class="item-content">
-                            <div class="item-header">
-                                <h3>CV Web Responsive</h3>
+                                <ul class="item-list grid">
+                                    <li>Redes</li>
+                                    <li>Hardware</li>
+                                    <li>Electrónica</li>
+                                    <li>Sistemas Operativos</li>
+                                    <li>Telecomunicaciones</li>
+                                    <li>Fundamentos de Desarrollo Web</li>
+                                    <li>Automatización y Domótica</li>
+                                </ul>
                             </div>
-                            <p>Desarrollo desde cero de un CV web responsive aplicando buenas prácticas de HTML y CSS,
-                                arquitectura basada en componentes reutilizables, Flexbox, CSS Grid y diseño optimizado
-                                para impresión en PDF.</p>
-                            <p class="tech-details">HTML5 · CSS3 · Flexbox · Grid · Responsive Design
-                            </p>
-                        </div>
-                    </article>
 
-                    <article class="item">
-                        <div class="timeline"></div>
-                        <div class="item-content">
-                            <div class="item-header">
-                                <h3>OverPlay - Web App de análisis de hábitos musicales</h3>
+                        </article>
+
+                        <article class="item">
+                            <div class="timeline"></div>
+                            <div class="item-content">
+                                <div class="item-header">
+                                    <h3>IES Prado Mayor</h3>
+                                    <span class="tag item-date">2015 - 2018</span>
+                                </div>
+
+                                <p>Bachiller en Ciencias de la Naturaleza y de la Salud</p>
                             </div>
-                            <p>Proyecto personal de aplicación web para analizar hábitos de escucha en Spotify mediante
-                                el procesamiento del
-                                historial del usuario y la visualización de estadísticas e indicadores personalizados.
-                            </p>
-                            <p class="tech-details">JavaScript · Python · FastAPI · Spotify API</p>
-                        </div>
-                    </article>
-                    <article class="item">
-                        <div class="timeline"></div>
-                        <div class="item-content">
-                            <div class="item-header">
-                                <h3>Sistema de Gestión de citas.</h3>
+
+                        </article>
+                    </section>
+
+                    <section class="resume-section">
+                        <h2>Proyectos</h2>
+                        <article class="item">
+                            <div class="timeline"></div>
+                            <div class="item-content">
+                                <div class="item-header">
+                                    <h3>CV Web Responsive</h3>
+                                </div>
+                                <p>Desarrollo desde cero de un CV web responsive aplicando buenas prácticas de HTML y
+                                    CSS,
+                                    arquitectura basada en componentes reutilizables, Flexbox, CSS Grid y diseño
+                                    optimizado
+                                    para impresión en PDF.</p>
+                                <p class="tech-details">HTML5 · CSS3 · Flexbox · Grid · Responsive Design
+                                </p>
                             </div>
-                            <p>Aplicación web para la gestión de reservas, desarrollada con Node.js siguiendo una
-                                arquitectura
-                                cliente-servidor y desplegada en la nube para su uso en un negocio real.</p>
-                            <p class="tech-details">HTML5 · CSS3 · JavaScript · Node.js · Render</p>
-                        </div>
-                    </article>
-                </section>
+                        </article>
+
+                        <article class="item">
+                            <div class="timeline"></div>
+                            <div class="item-content">
+                                <div class="item-header">
+                                    <h3>OverPlay - Web App de análisis de hábitos musicales</h3>
+                                </div>
+                                <p>Proyecto personal orientado al análisis de hábitos musicales mediante el
+                                    procesamiento
+                                    del historial de escucha de Spotify y la generación de estadísticas e indicadores
+                                    personalizados.
+                                </p>
+                                <p class="tech-details">JavaScript · Python · FastAPI · Spotify API</p>
+                            </div>
+                        </article>
+                        <article class="item">
+                            <div class="timeline"></div>
+                            <div class="item-content">
+                                <div class="item-header">
+                                    <h3>Sistema de Gestión de citas.</h3>
+                                </div>
+                                <p>Aplicación web para la gestión de reservas, desarrollada con Node.js siguiendo una
+                                    arquitectura
+                                    cliente-servidor y desplegada en la nube para su uso en un entorno de producción
+                                    real.
+                                </p>
+                                <p class="tech-details">HTML5 · CSS3 · JavaScript · Node.js · Render</p>
+                            </div>
+                        </article>
+                    </section>
 
 
+                </div>
             </div>
-
         </main>
     </div>
 </body>
