@@ -98,12 +98,48 @@ header img {
     letter-spacing: 1px;
 }
 
-main {
+.header-letter {
+    display: flex;
+    color: var(--text-secondary);
+    letter-spacing: 1px;
+    font-size: var(--font-size-sm);
+}
+
+.cv-page main {
     color: var(--text-primary);
     /* Color del texto pero excluyendo el titulo, para que tenga más fuerza */
     display: grid;
     grid-template-columns: var(--sidebar-width) 1fr;
     gap: var(--spacing-lg);
+}
+
+/* Carta */
+.letter-page main {
+    display: flex;
+    flex-direction: column;
+}
+
+.letter-page header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: var(--spacing-xl);
+    margin-bottom: var(--spacing-xl);
+    border-bottom: 2px solid var(--primary-light);
+    padding-bottom: var(--spacing-lg);
+}
+
+.letter-page .header-letter-info {
+    display: flex;
+    flex-direction: column;
+    text-align: end;
+    font-size: var(--font-size-sm);
+    color: var(--text-secondary);
+    letter-spacing: 1px;
+}
+
+.letter-page .content {
+    margin-bottom: var(--spacing-lg);
 }
 
 aside {
@@ -238,6 +274,15 @@ aside>section {
     gap: var(--spacing-sm);
     transition: transform 0.2s ease-in-out;
 }
+
+.print-page section {
+    padding-block: var(--spacing-md);
+}
+
+.print-new-page section {
+    padding-block: var(--spacing-md);
+}
+
 
 .item {
     display: flex;
